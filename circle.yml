@@ -6,3 +6,18 @@ machine:
 
   php:
     version: 5.4.5
+
+
+database:
+#  override:
+#    - mysql -u ubuntu yii2_advanced_unit < my-database-setup.sql
+
+  post:
+    - frontend/tests/yii migrate
+
+
+test:
+  post:
+    - cd frontend
+    - ../vendor/bin/codecept build
+    - ../vendor/bin/codecept run
