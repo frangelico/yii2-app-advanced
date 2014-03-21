@@ -13,7 +13,8 @@ database:
 #    - mysql -u ubuntu yii2_advanced_unit < my-database-setup.sql
 
   post:
-    - frontend/tests/unit/yii migrate
+    - cd frontend/tests/unit
+    - yii migrate
 
 
 test:
