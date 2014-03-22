@@ -4,14 +4,14 @@ machine:
   timezone:
     America/Los_Angeles # Set the timezone
 
-  hosts:
-    localhost: 127.0.0.1
+#  hosts:
+#    localhost: 127.0.0.1
 
   php:
     version: 5.4.5
 
-  environment:    
-    DATABASE_URL: mysql://ubuntu:@127.0.0.1:3306/circle_test
+#  environment:    
+#    DATABASE_URL: mysql://ubuntu:@127.0.0.1:3306/circle_test
 
 checkout:
   post:
