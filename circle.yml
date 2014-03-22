@@ -22,7 +22,7 @@ database:
 #  override:
 #    - mysql -u ubuntu yii2_advanced_unit < my-database-setup.sql
   post:
-    - frontend/tests/unit/yii migrate --interactive=0
+    - frontend/tests/unit/yii migrate 0 --interactive=0
 
 
 test:
