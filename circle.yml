@@ -4,8 +4,8 @@ machine:
   timezone:
     America/Los_Angeles # Set the timezone
 
-#  hosts:
-#    localhost: 127.0.0.1
+  hosts:
+    localhost: 127.0.0.1
 
   php:
     version: 5.4.5
@@ -22,7 +22,7 @@ database:
 #  override:
 #    - mysql -u ubuntu yii2_advanced_unit < my-database-setup.sql
   post:
-    - frontend/tests/unit/yii migrate
+    - frontend/tests/unit/yii migrate --interactive=0
 
 
 test:
