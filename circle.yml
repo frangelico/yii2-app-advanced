@@ -17,6 +17,8 @@ database:
 
 
 test:
+  pre:
+    - init --env=Development --overwrite=y
   post:
     - cd frontend
     - ../vendor/bin/codecept build
