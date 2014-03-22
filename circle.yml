@@ -4,6 +4,9 @@ machine:
   timezone:
     America/Los_Angeles # Set the timezone
 
+  hosts:
+    localhost: 127.0.0.1
+
   php:
     version: 5.4.5
 
