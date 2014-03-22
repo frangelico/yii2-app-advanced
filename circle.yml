@@ -10,6 +10,8 @@ machine:
 checkout:
   post:
     - ./init --env=Development --overwrite=y
+    - chmod 0755 frontend/tests/unit/yii
+
 database:
 #  override:
 #    - mysql -u ubuntu yii2_advanced_unit < my-database-setup.sql
