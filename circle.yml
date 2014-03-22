@@ -11,14 +11,13 @@ machine:
 database:
 #  override:
 #    - mysql -u ubuntu yii2_advanced_unit < my-database-setup.sql
-
+  pre:
+    - init --env=Development --overwrite=y
   post:
     - frontend/tests/unit/yii migrate
 
 
 test:
-  pre:
-    - init --env=Development --overwrite=y
   post:
     - cd frontend
     - ../vendor/bin/codecept build
