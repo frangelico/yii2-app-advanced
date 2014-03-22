@@ -8,8 +8,11 @@ return yii\helpers\ArrayHelper::merge(
     [
         'components' => [
             'db' => [
+				'class' => 'yii\db\Connection',
                 'dsn' => 'mysql:host=localhost;dbname=circle_test',
 				'username' => 'ubuntu',
+				'password' => '',
+				'charset' => 'utf8',
             ],
         ],
     ]
