@@ -27,6 +27,4 @@ database:
 
 test:
   post:
-#    - cd frontend
-    - vendor/bin/codecept build
-    - vendor/bin/codecept run
+    - cd frontend && ../vendor/bin/codecept build && ../vendor/bin/codecept run
