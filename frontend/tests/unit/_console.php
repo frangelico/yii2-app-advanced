@@ -9,6 +9,7 @@ return yii\helpers\ArrayHelper::merge(
         'components' => [
             'db' => [
                 'dsn' => 'mysql:host=localhost;dbname=circle_test',
+				'username' => 'ubuntu',
             ],
         ],
     ]
