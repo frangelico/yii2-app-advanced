@@ -11,6 +11,7 @@
 class_name: WebGuy
 modules:
     enabled:
+        - Selenium2
         - WebHelper
         - PhpBrowser
         - common\tests\_helpers\FixtureHelper
@@ -20,9 +21,9 @@ modules:
 # it is useful if you want to login in your app in each test.
 #        - WebDriver
     config:
-        PhpBrowser:
-            url: 'http://127.0.0.1:8080'
-#        WebDriver:
-#            url: 'http://localhost'
-#            browser: firefox
-#            restart: true
+#        PhpBrowser:
+#            url: 'http://127.0.0.1:8080'
+        WebDriver:
+            url: 'http://127.0.0.1'
+            browser: firefox
+            restart: true
