@@ -16,7 +16,8 @@ machine:
 
 dependencies:
     pre:
-      - apt-get install php5-gd
+#      - apt-get install php5-gd
+      - echo "extension = gd2.so" >> ~/.phpenv/versions/$(phpenv global)/etc/conf.d/php.ini
 
 checkout:
   post:
