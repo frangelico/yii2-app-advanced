@@ -17,7 +17,7 @@ machine:
 dependencies:
     pre:
 #      - apt-get install php5-gd
-      - echo "extension = gd.so" >> ~/.phpenv/versions/$(phpenv global)/etc/conf.d/php.ini
+#      - echo "extension = gd.so" >> ~/.phpenv/versions/$(phpenv global)/etc/conf.d/php.ini
 
 checkout:
   post:
@@ -33,6 +33,6 @@ database:
 
 test:
   post:
-    - cd frontend && ../vendor/bin/codecept build && ../vendor/bin/codecept run unit
-    - cd frontend && ../vendor/bin/codecept build && ../vendor/bin/codecept run functional
-    - cd frontend && ../vendor/bin/codecept build && ../vendor/bin/codecept run acceptance
+    - cd frontend && ../vendor/bin/codecept build unit && ../vendor/bin/codecept run unit
+    - cd frontend && ../vendor/bin/codecept build functional && ../vendor/bin/codecept run functional
+#    - cd frontend && ../vendor/bin/codecept build acceptance && ../vendor/bin/codecept run acceptance
