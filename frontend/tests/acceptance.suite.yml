@@ -23,7 +23,12 @@ modules:
     config:
 #        PhpBrowser:
 #            url: 'http://127.0.0.1:8080'
-        WebDriver:
+#        WebDriver:
+#            url: 'http://127.0.0.1'
+#            browser: firefox
+#            restart: true
+        Selenium2:
             url: 'http://127.0.0.1'
             browser: firefox
             restart: true
+            delay: 10
