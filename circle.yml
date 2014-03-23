@@ -10,6 +10,11 @@ machine:
   php:
     version: 5.4.5
 
+
+  dependencies:
+    post:
+      - apt-get install php5-gd
+
 #  environment:    
 #    DATABASE_URL: mysql://ubuntu:@127.0.0.1:3306/circle_test
 
