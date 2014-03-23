@@ -23,7 +23,9 @@
 		"yiisoft/yii2-codeception": "*",
 		"yiisoft/yii2-debug": "*",
 		"yiisoft/yii2-gii": "*",
-		"codeception/codeception": "1.8.*"
+		"codeception/codeception": "1.8.*",
+		"codeception/specify" : "*",
+		"codeception/verify": "*"
 
 	},
 	"suggest": {
