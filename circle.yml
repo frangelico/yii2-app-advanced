@@ -11,12 +11,12 @@ machine:
     version: 5.4.5
 
 
-  dependencies:
-    post:
-      - apt-get install php5-gd
-
 #  environment:    
 #    DATABASE_URL: mysql://ubuntu:@127.0.0.1:3306/circle_test
+
+dependencies:
+    pre:
+      - apt-get install php5-gd
 
 checkout:
   post:
@@ -32,4 +32,6 @@ database:
 
 test:
   post:
-    - cd frontend && ../vendor/bin/codecept build && ../vendor/bin/codecept run
+    - cd frontend && ../vendor/bin/codecept build && ../vendor/bin/codecept run unit
+    - cd frontend && ../vendor/bin/codecept build && ../vendor/bin/codecept run functional
+    - cd frontend && ../vendor/bin/codecept build && ../vendor/bin/codecept run acceptance
