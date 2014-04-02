@@ -25,8 +25,7 @@
 		"yiisoft/yii2-gii": "*",
 		"codeception/codeception": "1.8.*",
 		"codeception/specify" : "*",
-		"codeception/verify": "*",
-		"behat/mink-selenium2-driver":  "*@stable"
+		"codeception/verify": "*"
 
 	},
 	"suggest": {
