@@ -17,7 +17,7 @@ machine:
 dependencies:
     pre:
       - while [ 1 ]; do printf "\n"; done | pecl install imagick
-      - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar && &java -jar selenium-server-standalone-2.41.0.jar && true
+      - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar && java -jar selenium-server-standalone-2.41.0.jar &
 #      - pip install selenium==2.23.0
 #      - apt-get install php5-gd
 #      - echo "extension = gd.so" >> ~/.phpenv/versions/$(phpenv global)/etc/conf.d/php.ini
