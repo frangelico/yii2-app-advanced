@@ -17,6 +17,7 @@ machine:
 dependencies:
     pre:
       - while [ 1 ]; do printf "\n"; done | pecl install imagick
+      - pip install selenium==2.23.0
 #      - apt-get install php5-gd
 #      - echo "extension = gd.so" >> ~/.phpenv/versions/$(phpenv global)/etc/conf.d/php.ini
 
