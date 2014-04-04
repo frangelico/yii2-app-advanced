@@ -17,6 +17,10 @@ machine:
 dependencies:
     pre:
       - while [ 1 ]; do printf "\n"; done | pecl install imagick
+      - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar
+    post:
+      - java -jar selenium-server-standalone-2.41.0.jar:
+          background: true
 #      - pip install selenium==2.23.0
 #      - apt-get install php5-gd
 #      - echo "extension = gd.so" >> ~/.phpenv/versions/$(phpenv global)/etc/conf.d/php.ini
@@ -37,9 +41,6 @@ database:
 test:
   pre:
     - cd frontend && ../vendor/bin/codecept build
-    - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar && java -jar selenium-server-standalone-2.41.0.jar:
-      background: true
-    - sleep 5
 
   post:
     - cd frontend && ../vendor/bin/codecept run unit
