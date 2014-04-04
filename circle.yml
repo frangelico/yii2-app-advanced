@@ -22,10 +22,6 @@ dependencies:
     post:
       - java -jar selenium-server-standalone-2.41.0.jar:
           background: true
-#      - pip install selenium==2.23.0
-#      - apt-get install php5-gd
-#      - echo "extension = gd.so" >> ~/.phpenv/versions/$(phpenv global)/etc/conf.d/php.ini
-
 
 checkout:
   post:
