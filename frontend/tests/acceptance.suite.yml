@@ -28,7 +28,7 @@ modules:
 #            browser: firefox
 #            restart: true
         Selenium2:
-            url: 'http://127.0.0.1:4444'
+            url: 'http://127.0.0.1:4444/wd/hub'
             browser: firefox
             restart: true
             delay: 10
