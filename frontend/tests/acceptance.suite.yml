@@ -26,7 +26,9 @@ modules:
         WebDriver:
             url: 'http://127.0.0.1'
             browser: firefox
-            restart: true
+             wait: 10
+             capabilities:
+                 unexpectedAlertBehaviour: 'accept'
 #        Selenium2:
 #            url: 'http://127.0.0.1:4444/wd/hub'
 #            browser: firefox
