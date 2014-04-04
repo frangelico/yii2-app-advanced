@@ -37,7 +37,9 @@ database:
 test:
   pre:
     - cd frontend && ../vendor/bin/codecept build
-    - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar && java -jar selenium-server-standalone-2.41.0.jar &
+    - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar && java -jar selenium-server-standalone-2.41.0.jar:
+      background: true
+    - sleep 5
 
   post:
     - cd frontend && ../vendor/bin/codecept run unit
