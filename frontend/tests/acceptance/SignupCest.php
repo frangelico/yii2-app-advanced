@@ -64,6 +64,7 @@ class SignupCest
             'email'			=>	'tester.email',
             'password'		=>	'tester_password',
         ]);
+		$I->wait(1);
 
         $I->expectTo('see that email address is wrong');
         $I->dontSee('Username cannot be blank.', '.help-block');
@@ -76,6 +77,7 @@ class SignupCest
             'email'			=>	'tester.email@example.com',
             'password'		=>	'tester_password',
         ]);
+		$I->wait(1);
 
         $I->expectTo('see that user logged in');
         $I->seeLink('Logout (tester)');
