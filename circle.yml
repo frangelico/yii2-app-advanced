@@ -17,10 +17,10 @@ machine:
 dependencies:
     pre:
       - while [ 1 ]; do printf "\n"; done | pecl install imagick
-#      - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar
-      - wget http://selenium-release.storage.googleapis.com/2.39/selenium-server-standalone-2.39.0.jar
+      - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar
+#      - wget http://selenium-release.storage.googleapis.com/2.39/selenium-server-standalone-2.39.0.jar
     post:
-      - java -jar selenium-server-standalone-2.39.0.jar:
+      - java -jar selenium-server-standalone-2.41.0.jar:
           background: true
       - cp ~/yii2-app-advanced/circle.conf /etc/apache2/sites-available
       - a2ensite circle.conf
