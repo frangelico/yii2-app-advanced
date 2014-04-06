@@ -51,7 +51,7 @@ class SignupCest
         $I->amGoingTo('submit signup form with no data');
 
         $signupPage->submit([]);
-		$I->wait(10);
+		$I->wait(1);
 
         $I->expectTo('see validation errors');
         $I->see('Username cannot be blank.', '.help-block');
