@@ -51,7 +51,7 @@ class SignupCest
         $I->amGoingTo('submit signup form with no data');
 
         $signupPage->submit([]);
-		$I->wait(1);
+		$I->wait(0.5);
 
         $I->expectTo('see validation errors');
         $I->see('Username cannot be blank.', '.help-block');
@@ -64,7 +64,7 @@ class SignupCest
             'email'			=>	'tester.email',
             'password'		=>	'tester_password',
         ]);
-		$I->wait(1);
+		$I->wait(0.5);
 
         $I->expectTo('see that email address is wrong');
         $I->dontSee('Username cannot be blank.', '.help-block');
@@ -77,7 +77,7 @@ class SignupCest
             'email'			=>	'tester.email@example.com',
             'password'		=>	'tester_password',
         ]);
-		$I->wait(1);
+		$I->wait(0.5);
 
         $I->expectTo('see that user logged in');
         $I->seeLink('Logout (tester)');
