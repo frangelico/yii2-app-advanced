@@ -27,7 +27,7 @@ modules:
         WebDriver:
             url: 'http://127.0.0.1:8080'
             browser: firefox
-            wait: 10
+            wait: 20
             capabilities:
               unexpectedAlertBehaviour: 'accept'
 #
