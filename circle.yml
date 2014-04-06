@@ -23,8 +23,8 @@ dependencies:
       - java -jar selenium-server-standalone-2.41.0.jar:
           background: true
       - cp ~/yii2-app-advanced/circle.conf /etc/apache2/sites-available
-          - a2ensite circle.conf
-          - sudo service apache2 restart
+      - a2ensite circle.conf
+      - sudo service apache2 restart
 
 checkout:
   post:
