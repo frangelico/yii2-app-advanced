@@ -24,7 +24,7 @@ dependencies:
           background: true
       - cp ~/yii2-app-advanced/circle.conf /etc/apache2/sites-available
       - a2ensite circle.conf
-      - sudo service apache2 reload
+      - sudo service apache2 restart
 
 checkout:
   post:
