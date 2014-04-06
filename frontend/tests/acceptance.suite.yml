@@ -12,7 +12,7 @@ class_name: WebGuy
 modules:
     enabled:
         - Selenium2
-        - SeleniumHelper
+#        - SeleniumHelper
         - WebHelper
 #        - PhpBrowser
         - common\tests\_helpers\FixtureHelper
