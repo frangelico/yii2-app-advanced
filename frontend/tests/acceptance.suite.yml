@@ -24,6 +24,9 @@ modules:
 #        PhpBrowser:
 #            url: 'http://127.0.0.1:8080'
 #
+
+# try: firefox, 10, wait 1
+
         WebDriver:
             url: 'http://127.0.0.1:8080'
             browser: firefox
