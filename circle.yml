@@ -32,7 +32,7 @@ checkout:
   post:
     - ./init --env=Development --overwrite=y
     # for: codecoverage , require: xdebug,
-    - wget https://raw.github.com/Codeception/c3/master/c3.php
+    - cd frontend/web && wget https://raw.github.com/Codeception/c3/master/c3.php
     - chmod 0755 frontend/tests/unit/yii
     #Check below the correct permissions. We know that frontend/web/assets needs to be writable by web process
     - chmod 0777 frontend/web/assets
