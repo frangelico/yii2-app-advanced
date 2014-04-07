@@ -6,6 +6,7 @@ $I = new WebGuy($scenario);
 $I->wantTo('ensure that contact works');
 
 $contactPage = ContactPage::openBy($I);
+$I->makeScreenshot('open');
 
 $I->see('Contact', 'h1');
 

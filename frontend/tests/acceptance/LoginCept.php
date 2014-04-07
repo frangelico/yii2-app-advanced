@@ -6,6 +6,8 @@ $I = new WebGuy($scenario);
 $I->wantTo('ensure login page works');
 
 $loginPage = LoginPage::openBy($I);
+$I->makeScreenshot('open');
+
 
 $I->amGoingTo('submit login form with no data');
 $loginPage->login('', '');
