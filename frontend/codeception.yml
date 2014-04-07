@@ -20,17 +20,22 @@ coverage:
     enabled: true
     whitelist:
         include:
-            - *
+            - models/*
+            - controllers/*
+            - views/*
+            - widgets/*
         exclude:
             - runtime/*
             - assets/*
             - tests/*
             - config/*
+            - web/*
     blacklist:
         include:
             - runtime/*
             - assets/*
             - tests/*
             - config/*
+            - web/*
         exclude:
             - widgets/*
