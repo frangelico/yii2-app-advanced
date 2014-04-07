@@ -23,6 +23,9 @@ require_once(__DIR__ . '/../../vendor/yiisoft/yii2/Yii.php');
 
 require(__DIR__ . '/../../common/config/aliases.php');
 
+include(__DIR__ . '/c3.php');
+
+
 // set correct script paths
 $_SERVER['SCRIPT_FILENAME'] = TEST_ENTRY_FILE;
 $_SERVER['SCRIPT_NAME'] = TEST_ENTRY_URL;
