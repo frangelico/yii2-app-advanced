@@ -15,6 +15,6 @@ require(__DIR__ . '/../../common/config/aliases.php');
 
 $config = require(__DIR__ . '/../tests/acceptance/_config.php');
 
-include '/../../c3.php';
+require(__DIR__ . '/../../c3.php');
 
 (new yii\web\Application($config))->run();
