@@ -53,4 +53,6 @@ test:
   post:
     - cd frontend && ../vendor/bin/codecept run --coverage --xml --html unit
     - cd frontend && ../vendor/bin/codecept run --coverage --xml --html functional
-    - cd frontend && ../vendor/bin/codecept run --coverage --xml --html acceptance && cp -R tests/_log/ $CIRCLE_ARTIFACTS/tests/log/
+#    no code coverage for acceptance tests for now
+#    - cd frontend && ../vendor/bin/codecept run --coverage --xml --html acceptance && cp -R tests/_log/ $CIRCLE_ARTIFACTS/tests/log/
+    - cd frontend && ../vendor/bin/codecept run acceptance && cp -R tests/_log/ $CIRCLE_ARTIFACTS/tests/log/
