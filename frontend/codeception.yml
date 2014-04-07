@@ -20,22 +20,30 @@ coverage:
     enabled: true
     whitelist:
         include:
-            - models/*
-            - controllers/*
-            - views/*
-            - widgets/*
+            - frontend/*
+            - backend/*
+            - common/*
         exclude:
-            - runtime/*
-            - assets/*
-            - tests/*
-            - config/*
-            - web/*
+            - frontend/runtime/*
+            - backend/runtime/*
+            - frontend/assets/*
+            - backend/assets/*
+            - frontend/tests/*
+            - backend/tests/*
+            - common/tests/*
+            - frontend/config/*
+            - backend/config/*
+            - common/config/*
     blacklist:
         include:
-            - runtime/*
-            - assets/*
-            - tests/*
-            - config/*
-            - web/*
+            - frontend/runtime/*
+            - backend/runtime/*
+            - frontend/assets/*
+            - backend/assets/*
+            - frontend/tests/*
+            - backend/tests/*
+            - common/tests/*
+            - frontend/config/*
+            - backend/config/*
+            - common/config/*
         exclude:
-            - widgets/*

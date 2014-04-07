@@ -17,8 +17,7 @@ machine:
 dependencies:
     pre:
       - while [ 1 ]; do printf "\n"; done | pecl install imagick
-#      - while [ 1 ]; do printf "\n"; done | pecl install xdebug
-      - sed -i 's/^;//' ~/.phpenv/versions/$(phpenv global)/etc/conf.d/xdebug.ini
+      - while [ 1 ]; do printf "\n"; done | pecl install imagick
       - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar
 #      - wget http://selenium-release.storage.googleapis.com/2.39/selenium-server-standalone-2.39.0.jar
     post:
@@ -31,8 +30,6 @@ dependencies:
 checkout:
   post:
     - ./init --env=Development --overwrite=y
-    # for: codecoverage , require: xdebug,
-    - cd frontend/web && wget https://raw.github.com/Codeception/c3/master/c3.php && chmod og+xr c3.php
     - chmod 0755 frontend/tests/unit/yii
     #Check below the correct permissions. We know that frontend/web/assets needs to be writable by web process
     - chmod 0777 frontend/web/assets
