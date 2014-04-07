@@ -17,7 +17,7 @@ machine:
 dependencies:
     pre:
       - while [ 1 ]; do printf "\n"; done | pecl install imagick
-      - while [ 1 ]; do printf "\n"; done | pecl install imagick
+      - sed -i 's/^;//' ~/.phpenv/versions/$(phpenv global)/etc/conf.d/xdebug.ini
       - wget http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar
 #      - wget http://selenium-release.storage.googleapis.com/2.39/selenium-server-standalone-2.39.0.jar
     post:
