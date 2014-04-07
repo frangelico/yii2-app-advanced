@@ -27,7 +27,7 @@ modules:
         WebDriver:
             url: 'http://127.0.0.1:8080'
             browser: chromedriver23
-            wait: 10
+            wait: 5
             capabilities:
               unexpectedAlertBehaviour: 'accept'
 #
