@@ -34,6 +34,8 @@ class SignupCest
      */
     public function _fail($event)
     {
+		$I = new WebGuy('Signup');
+		$I->makeScreenshot('failed');
     }
 
     /**
@@ -45,6 +47,8 @@ class SignupCest
         $I->wantTo('ensure that signup works');
 
         $signupPage = SignupPage::openBy($I);
+		$I->makeScreenshot('open');
+
         $I->see('Signup', 'h1');
         $I->see('Please fill out the following fields to signup:');
 
