@@ -16,3 +16,34 @@ modules:
             user: ''
             password: ''
             dump: tests/_data/dump.sql
+coverage:
+    enabled: true
+    whitelist:
+        include:
+            - frontend/*
+            - backend/*
+            - common/*
+        exclude:
+            - frontend/runtime/*
+            - backend/runtime/*
+            - frontend/assets/*
+            - backend/assets/*
+            - frontend/tests/*
+            - backend/tests/*
+            - common/tests/*
+            - frontend/config/*
+            - backend/config/*
+            - common/config/*
+    blacklist:
+        include:
+            - frontend/runtime/*
+            - backend/runtime/*
+            - frontend/assets/*
+            - backend/assets/*
+            - frontend/tests/*
+            - backend/tests/*
+            - common/tests/*
+            - frontend/config/*
+            - backend/config/*
+            - common/config/*
+        exclude:
