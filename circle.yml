@@ -45,11 +45,10 @@ database:
 
 test:
   pre:
-    - mkdir $CIRCLE_ARTIFACTS/acceptance
-    - mkdir $CIRCLE_ARTIFACTS/acceptance/log
+    - mkdir $CIRCLE_ARTIFACTS/tests
     - cd frontend && ../vendor/bin/codecept build
 
   post:
     - cd frontend && ../vendor/bin/codecept run unit
     - cd frontend && ../vendor/bin/codecept run functional
-    - cd frontend && ../vendor/bin/codecept run acceptance && cp -R tests/_log/ $CIRCLE_ARTIFACTS/acceptance/log
+    - cd frontend && ../vendor/bin/codecept run acceptance && cp -R tests/_log/ $CIRCLE_ARTIFACTS/test/
